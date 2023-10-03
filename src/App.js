@@ -18,7 +18,7 @@ const App = () => (
 
     <div className='wrapper'> 
     <Routes>
-          <Route path="/react-gh-pages" element={<Main />} />
+          <Route path="/" element={<Main />} />
           <Route path="/crypto" element={<Crypto />} />
       </Routes>
     </div>
