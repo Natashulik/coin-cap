@@ -1,13 +1,15 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-
 body {
     font-family: 'Poppins';
-    background-color: #f6ffed;
+    /*background-color: #f6ffed;*/
 }
 
 .wrapper {
@@ -15,9 +17,6 @@ body {
     min-height: 1000px;
     background-color: white;
     margin: 0 auto;
-    border-left:  2px solid rgba(118, 176, 118, 0.4);
-    border-right: 2px solid rgba(118, 176, 118, 0.4);
-   
 }
 
 .header {
@@ -39,6 +38,7 @@ body {
 
 .logo_block {
     display: flex;
+    margin-left: 8%;
 
 }
 
@@ -56,3 +56,33 @@ body {
     align-items: center;
     margin: 0 auto;
 }
+
+.ant-table-wrapper .ant-table-tbody >tr >td {
+    border-bottom: 1px solid #dbe4dc;
+    font-size: 16px;
+}
+/*
+.ant-table {
+
+    font-family: -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+   
+}*/
+
+.crypto_icon {
+    margin-right: 10px;
+    vertical-align: middle;
+ 
+}
+
+.negative_percent {
+    color: red;
+}
+.positive_percent {
+    color: #00B96B;
+}
+
+.popular_cryptos {
+font-family: 'Segoe UI Emoji';
+}
+
+

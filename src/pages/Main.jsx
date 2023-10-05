@@ -5,7 +5,9 @@ import CryptosTable from "../components/CryptosTable";
 const Main = () => {
     return <div >
       <Header/>
-      <CryptosTable />
+      <div className='wrapper'> 
+         <CryptosTable />
+      </div>
      
       
     </div>
