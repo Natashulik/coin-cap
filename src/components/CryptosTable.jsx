@@ -100,8 +100,10 @@ const CryptosTable = () => {
       }
   
       return <div >
-  <Table dataSource={cryptos} columns={columns}
-  onRow = {(row, rowIndex)=> {
+  <Table dataSource={cryptos}
+         columns={columns}
+         rowKey="id"
+         onRow = {(row, rowIndex)=> {
     return {onClick: ()=> handleRowClick(row)}
   }} />
     </div>

@@ -1,6 +1,6 @@
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
     box-sizing: border-box;
@@ -81,8 +81,48 @@ body {
     color: #00B96B;
 }
 
-.popular_cryptos {
-font-family: 'Segoe UI Emoji';
+.main_info_block {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
 }
 
+.popular_block {
+font-family: 'Open Sans';
+border: 1px solid #00B96B;
+/*background-color:rgba(215, 255, 211, 0.2) ;*/
+border-radius: 3px;
+width: 330px;
+margin-bottom:  30px;
+padding: 10px;
+}
 
+.popular_title {
+    margin-bottom: 8px;
+
+}
+
+.popular_cryptos {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular_cryptos_item {
+border:  1px solid #00B96B;
+width: 90px;
+padding: 5px;
+border-radius: 3px;
+background-color:rgba(215, 255, 211, 0.3);
+}
+
+.popular_cryptos_item:hover {
+    background-color:rgba(215, 255, 211, 0.8);
+}
+
+.popular_name {
+    font-weight: 600;
+}
+
+.wallet_image {
+ width: 40px;
+}
