@@ -7,6 +7,8 @@ import { useEffect } from "react";
 import Icon from "react-crypto-icons";
 import { formatedPrice, formatedPercent,formatedBillion} from "../helpers/formatedData";
 import {PlusSquareTwoTone} from "@ant-design/icons";
+import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const columns = [
   {
@@ -95,17 +97,20 @@ const CryptosTable = () => {
            fetchData();
       }, [])
 
+      const navigate = useNavigate();
+
       const handleRowClick = (row) => {
- console.log(row);
+        console.log(row);
+        navigate("/crypto");
       }
   
       return <div >
   <Table dataSource={cryptos}
          columns={columns}
          rowKey="id"
-         onRow = {(row, rowIndex)=> {
-    return {onClick: ()=> handleRowClick(row)}
-  }} />
+         onRow={(row) => ({
+          onClick: () =>  handleRowClick(row)
+        })}/>
     </div>
 }
 

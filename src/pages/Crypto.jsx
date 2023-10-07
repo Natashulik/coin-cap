@@ -2,7 +2,7 @@
 const Crypto = () => {
   
   return <div >
-        
+  
       
     </div>
 
