@@ -5,10 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { setCryptos } from "../redux/tableSlice";
 import { useEffect } from "react";
 import Icon from "react-crypto-icons";
-import { formatedPrice, formatedPercent,formatedBillion} from "../helpers/formatedData";
+import { formatedPrice, formatedPercent,formatedMillion} from "../helpers/formatedData";
 import {PlusSquareTwoTone} from "@ant-design/icons";
 import { useNavigate } from "react-router";
-import { Link } from "react-router-dom";
+import { setSelectedCrypto } from "../redux/tableSlice";
 
 const columns = [
   {
@@ -68,7 +68,7 @@ const columns = [
     key: 'marketcap',
     sorter: (a,b) => a.marketCapUsd -b.marketCapUsd,
     render: (marketcap) => (
-      <p>{formatedBillion(marketcap)}b $</p>
+      <p>{formatedMillion(marketcap)}m $</p>
     )
   },
   {
@@ -87,10 +87,11 @@ const CryptosTable = () => {
   const cryptos = useSelector(state => state.table.cryptos);
   const dispatch = useDispatch();
 
+  console.log(cryptos);
       const fetchData = async () => {
         const res = await fetchAllCryptos(); 
         dispatch(setCryptos(res.data));
-          console.log(res.data);        
+       
       } 
     
       useEffect(() => {
@@ -100,7 +101,7 @@ const CryptosTable = () => {
       const navigate = useNavigate();
 
       const handleRowClick = (row) => {
-        console.log(row);
+        dispatch(setSelectedCrypto(row))
         navigate("/crypto");
       }
   

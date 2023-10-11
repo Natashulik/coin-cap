@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
    cryptos: [],
+   selectedCrypto: {},
  }
 
 export const tableSlice = createSlice({
@@ -11,8 +12,12 @@ export const tableSlice = createSlice({
       setCryptos: (state, action) => {
         state.cryptos = action.payload;
       },
+      setSelectedCrypto: (state, action) => {
+        state.selectedCrypto = action.payload;
+      },
+
     }
   })
   
-  export const { setCryptos } = tableSlice.actions;
+  export const { setCryptos, setSelectedCrypto } = tableSlice.actions;
   export default tableSlice.reducer;

@@ -10,15 +10,11 @@ const App = () => (
       token: {
         colorPrimary: '#00B96B',
         borderRadius: 2,
-        
-     
-        colorBgContainer: ' rgba(215, 255, 211, 0.4)',
+        colorBgContainer: 'rgba(215, 255, 211, 0.4)',
       },
     }}
   >
-
-    
-    <Routes>
+     <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/crypto" element={<Crypto />} />
       </Routes>

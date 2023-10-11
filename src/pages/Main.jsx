@@ -6,7 +6,7 @@ import Wallet from "../components/Wallet";
 const Main = () => {
     return <div >
       <Header/>
-      <div className='wrapper'> 
+     <div className='wrapper'> 
           <div className="main_info_block">
             <PopularCryptos/>
             <Wallet />    
@@ -14,10 +14,7 @@ const Main = () => {
        <CryptosTable />
       </div>
      
-      
-    </div>
-
+          </div>
 }
-
 
 export default Main;

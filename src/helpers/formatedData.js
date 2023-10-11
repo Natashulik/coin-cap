@@ -11,7 +11,7 @@ export const formatedPrice = (price) => {
   }
 
 
-  export const formatedBillion = (price) => {
+  export const formatedMillion = (price) => {
     const formatter = new Intl.NumberFormat("de-DE", {
       style: 'decimal',
       currency: 'USD',
@@ -19,7 +19,7 @@ export const formatedPrice = (price) => {
       maximumFractionDigits: 2,
 
     });
-    return formatter.format(price/1000000000);
+    return formatter.format(price/1000000);
   }
     
 
