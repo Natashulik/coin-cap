@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import logo from "../assets/logo.png";
+import logo from "../assets/logo1.png";
+
 
 const Header = () => {
     return <div className='header'>
@@ -8,6 +9,7 @@ const Header = () => {
            <img  className="logo_image" src={logo} alt="логотип" /> 
            <h2 className='header_title'> <span className="first_letter">C</span>oin<span className="first_letter">C</span>ap</h2>
      </Link>    
+     
     </div>
 
 }

@@ -14,12 +14,11 @@ const Graph= () => {
     const fetchData = async () => {
         const res = await fetchHistory(id); 
         dispatch(setHistoryData(res.data));
-          console.log(res.data);    
       } 
 
       useEffect(() => {
         fetchData();
-     }, [])
+     }, [id])
 
      const last24HoursData =  historyData.slice(-24).map((item, index)=>{
         let hour = new Date(item.date).toLocaleString('en-US', { hour: 'numeric', hour12: true, timeZone: 'UTC' });
@@ -27,8 +26,6 @@ const Graph= () => {
            return {priceUsd: price, date: hour}
      })
  
-     console.log(last24HoursData)
-
    return  <div className='graph_block'>        <LineChart width={550} height={350} data={last24HoursData}
         dot={{ stroke: 'red', strokeWidth: 2 }}
          >

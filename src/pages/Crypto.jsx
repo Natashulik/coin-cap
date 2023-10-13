@@ -8,8 +8,8 @@ import CryptoInfo from '../components/CryptoInfo';
 
 const Crypto = () => {
   return <div >
-    <Header />
-    <div className='wrapper'>
+     <div className='wrapper'>
+     <Header />
       <div className="main_info_block">
         <PopularCryptos />
         <Wallet />

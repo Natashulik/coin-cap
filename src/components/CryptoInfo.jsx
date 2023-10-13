@@ -27,15 +27,15 @@ const CryptoInfo = () => {
       <Col span={12}><div style={style2}>Change % (24h) </div></Col>
       <Col span={12}><div style={style2}>{formatedPercent(changePercent24Hr)} % </div></Col>
       <Col span={12}><div style={style1}>Market cap</div></Col>
-      <Col span={12}><div style={style1}>{formatedMillion(marketCapUsd)}b $ </div></Col>
+      <Col span={12}><div style={style1}>{formatedMillion(marketCapUsd)}m $ </div></Col>
       <Col span={12}><div style={style2}>Supply</div></Col>
-      <Col span={12}><div style={style2}>{formatedMillion(supply)} $ </div></Col>
+      <Col span={12}><div style={style2}>{formatedMillion(supply)}m $ </div></Col>
       <Col span={12}><div style={style1}>Max supply</div></Col>
-      <Col span={12}><div style={style1}>{formatedMillion(maxSupply)} $ </div></Col>
+      <Col span={12}><div style={style1}>{formatedMillion(maxSupply)}m $ </div></Col>
       <Col span={12}><div style={style2}>Volum USD (24H)</div></Col>
-      <Col span={12}><div style={style2}>{formatedMillion(volumeUsd24Hr)}b $</div></Col>
+      <Col span={12}><div style={style2}>{formatedMillion(volumeUsd24Hr)}m $</div></Col>
       <Col span={12}><div style={style1}>VWAP (24H)</div></Col>
-      <Col span={12}><div style={style1}>{formatedMillion(vwap24Hr)}</div></Col>
+      <Col span={12}><div style={style1}>{formatedPrice(vwap24Hr)} $</div></Col>
           
     </Row>
      </div>
