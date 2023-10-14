@@ -3,7 +3,9 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
    cryptoQuantity: 0,
    walletAmount: 0,
-   historyData: []
+   historyData: [],
+   interval: 'h1',
+   selectedButton: '24H'
  }
 
 export const cryptoSlice = createSlice({
@@ -19,10 +21,17 @@ export const cryptoSlice = createSlice({
       setHistoryData: (state, action) => {
         state.historyData = action.payload;
       },
+      setSelectedButton: (state, action) => {
+        state.selectedButton = action.payload;
+      },
+      setInterval: (state, action) => {
+        state.interval = action.payload;
+      },
+     
      
 
     }
   })
   
-  export const { setCryptoQuantity, setWalletAmount, setHistoryData } = cryptoSlice.actions;
+  export const { setCryptoQuantity, setWalletAmount, setHistoryData, setSelectedButton, setInterval } = cryptoSlice.actions;
   export default cryptoSlice.reducer;

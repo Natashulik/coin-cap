@@ -20,7 +20,7 @@ const CryptoInfo = () => {
        supply, volumeUsd24Hr, vwap24Hr, explorer:site  } = useSelector(state => state.table.selectedCrypto);
 
     return <div className='info_table' >
-     <Divider orientation="left" className='divider' style={{fontSize: '20px', marginTop: '0px'}}>Cryptocurrency information</Divider>
+     <Divider orientation="left" className='divider' style={{fontSize: '20px', marginTop: '0px', borderColor: 'lightgray'}}>Cryptocurrency information</Divider>
      <Row >
       <Col span={12}>  <div style={style1}>Price</div></Col>
       <Col span={12}><div style={style1}>{formatedPrice(priceUsd)} $</div></Col>
