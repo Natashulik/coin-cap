@@ -1,28 +1,28 @@
 import { Button, Form, Input, Typography } from 'antd';
 import { useSelector, useDispatch } from "react-redux";
-import { setCryptoQuantity, setWalletAmount } from "../redux/cryptoSlice";
+import { setCryptoQuantity } from "../redux/cryptoSlice";
+import { setWalletAmount, setWalletCryptos} from "../redux/walletSlice";
 import { formatedPrice } from '../helpers/formatedData';
 
 const SelectedCrypto = () => {
-    const { name, symbol, priceUsd  } = useSelector(state => state.table.selectedCrypto);
+    const { id, name, symbol, priceUsd  } = useSelector(state => state.table.selectedCrypto);
     const cryptoQuantity = useSelector(state => state.crypto.cryptoQuantity);
-    const walletAmount = useSelector(state => state.crypto.walletAmount);
+    const walletAmount = useSelector(state => state.wallet.walletAmount);
     const amount = formatedPrice(cryptoQuantity*priceUsd);
    
     const dispatch= useDispatch();
   
    const handleCryptoChange = (event) => {
    dispatch(setCryptoQuantity(+event.target.value));
-   console.log(cryptoQuantity);
+
     }
 
     const onFinish = (values) => {
       dispatch(setWalletAmount(walletAmount + cryptoQuantity*priceUsd));
+      dispatch(setWalletCryptos({id: id, name: name, quantity: cryptoQuantity, price: priceUsd}))
       dispatch(setCryptoQuantity(0))
    
-      console.log(cryptoQuantity);
-      console.log(values);
-   };
+       };
 
    const onFinishFailed = (errorInfo) => {
        console.log("Failed:", errorInfo);
@@ -92,37 +92,3 @@ const SelectedCrypto = () => {
 
 export default SelectedCrypto;  
 
-
-
-/*const SelectedCrypto = () => {
-    const { name, symbol, priceUsd  } = useSelector(state => state.table.selectedCrypto);
-    const cryptoQuantity = useSelector(state => state.crypto.cryptoQuantity);
-    const walletAmount = useSelector(state => state.crypto.walletAmount);
-    const amount = formatedPrice(cryptoQuantity*priceUsd);
-    const dispatch= useDispatch();
-  
-    const handleCryptoChange = (event) => {
-   dispatch(setCryptoQuantity(+event.target.value));
-    }
-
-    const onFinish = (values) => {
-        dispatch(setWalletAmount(walletAmount + cryptoQuantity*priceUsd));
-        dispatch(setCryptoQuantity(0));
-   };
-
-     return <div className="selected_crypto">
-             <span >{name}</span>
-        <Form name="basic" onFinish={onFinish} >
-            <Form.Item  name="quantity"
-                <Input type="number" placeholder="Enter crypro's quantity"
-                value={cryptoQuantity}
-                onChange={handleCryptoChange}  />
-            </Form.Item>
-
-            <Form.Item  name="amount"  >
-             <Typography.Text> Amount is {amount} USD </Typography.Text>
-            </Form.Item>
-            <Button type="primary" htmlType="submit" >  Buy </Button>
-        </Form>
-    </div>
-}*/

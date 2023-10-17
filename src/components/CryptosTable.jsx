@@ -16,7 +16,6 @@ const CryptosTable = () => {
   const selectedCrypto = useSelector(state => state.table.selectedCrypto);
   const dispatch = useDispatch();
 
-
    const fetchData = async () => {
         const res = await fetchAllCryptos(); 
         dispatch(setCryptos(res.data));
@@ -36,8 +35,7 @@ const CryptosTable = () => {
 
          const handleIconClick =(row, event) =>{
           event.stopPropagation();
-          console.log(row);
-          console.log(row.id);
+     
           dispatch(setSelectedCrypto(row))
           dispatch(setIsModalBuyOpen(true));
         }
@@ -59,7 +57,9 @@ const CryptosTable = () => {
                   <Icon name={symbol.toLowerCase()} size={20} className="crypto_icon"/>
                   <span >{symbol}</span>
               </>
-            )},
+            ),
+            responsive: ['lg', 'xl', 'xxl']
+          },
            {
             title: 'Name',
             dataIndex: 'name',
@@ -82,7 +82,8 @@ const CryptosTable = () => {
             sorter: (a,b) => a.vwap24Hr -b.vwap24Hr,
             render: (price) => (
               <p>{formatedPrice(price)} $</p>
-            )
+            ),
+            responsive: ['md', 'lg', 'xl', 'xxl']
           },
           {
             title: 'Change (24h)',
@@ -101,7 +102,8 @@ const CryptosTable = () => {
             sorter: (a,b) => a.marketCapUsd -b.marketCapUsd,
             render: (marketcap) => (
               <p>{formatedMillion(marketcap)}m $</p>
-            )
+            ),
+            responsive: ['lg', 'xl', 'xxl']
           },
           {
             title: 'Byu',
@@ -114,12 +116,31 @@ const CryptosTable = () => {
         ];
 
       return <div >
-  <Table dataSource={cryptos}
+        <ConfigProvider
+        theme={{
+            token: {
+                borderRadius: 2,
+                colorBgContainer: 'rgba(188, 253, 128, 0.1)',
+              },
+        }}
+      >
+            <Table dataSource={cryptos}
          columns={columns}
          rowKey="id"
          onRow={(row) => ({
           onClick: (event) =>  handleRowClick(row, event)
-        })}  />
+        })} 
+        responsive={{
+          xs: false, // не показывать на мобильных устройствах
+          sm: true, // показывать на устройствах с шириной экрана от 576px до 768px
+          md: true, // показывать на устройствах с шириной экрана от 768px до 992px
+          lg: true, // показывать на устройствах с шириной экрана от 992px до 1200px
+          xl: true, // показывать на устройствах с шириной экрана от 1200px и выше
+          xxl: true, // показывать на устройствах с шириной экрана от 1600px и выше
+        }}
+        />
+         </ConfigProvider>
+
     </div>
 }
 

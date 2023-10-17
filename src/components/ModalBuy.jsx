@@ -1,15 +1,16 @@
 import { Button, Form, Input, Typography } from 'antd';
 import { useSelector, useDispatch } from "react-redux";
-import { setCryptoQuantity, setWalletAmount } from "../redux/cryptoSlice";
+import { setCryptoQuantity } from "../redux/cryptoSlice";
+import {  setWalletAmount, setWalletCryptos} from '../redux/walletSlice';
 import { formatedPrice } from '../helpers/formatedData';
 import {CloseOutlined} from "@ant-design/icons";
 import { setIsModalBuyOpen } from '../redux/tableSlice';
 
 
 const ModalBuy = () => {
-    const { name, priceUsd  } = useSelector(state => state.table.selectedCrypto);
+    const {id,  name, priceUsd  } = useSelector(state => state.table.selectedCrypto);
     const cryptoQuantity = useSelector(state => state.crypto.cryptoQuantity);
-    const walletAmount = useSelector(state => state.crypto.walletAmount);
+    const walletAmount = useSelector(state => state.wallet.walletAmount);
    
     const dispatch= useDispatch();
 
@@ -18,9 +19,10 @@ const ModalBuy = () => {
     }
 
     const onFinish = (values) => {
-        console.log("Success:", values);
         dispatch(setWalletAmount(walletAmount + cryptoQuantity*priceUsd));
+        dispatch(setWalletCryptos({id: id, name: name, quantity: cryptoQuantity, price: priceUsd}))
         dispatch(setCryptoQuantity(0));
+        dispatch(setIsModalBuyOpen(false));
    };
 
    const onFinishFailed = (errorInfo) => {
@@ -30,6 +32,11 @@ const ModalBuy = () => {
    const handleClose = ()=> {
     dispatch(setIsModalBuyOpen(false));
    }
+
+   const [form] = Form.useForm();
+   const onReset = () => {
+    form.resetFields();
+  };
 
     return  <div className="modal_buy">
     <div className="modal_buy_title"> Buy <span className="modal_buy_name"> {name}</span></div>
@@ -47,6 +54,7 @@ const ModalBuy = () => {
         wrapperCol={{
             span: 24
         }}
+        form={form}
         layout="vertical"
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
@@ -77,7 +85,8 @@ const ModalBuy = () => {
         >
             <Button type="primary" htmlType="submit" 
             style={{ width: "100px", fontFamily: "Open Sans", fontSize: "16px", paddingTop: "0",
-            borderRadius: "4px", marginBottom: "5px"  }}>
+            borderRadius: "4px", marginBottom: "5px"  }}
+            onClick={onReset}>
                 Buy </Button>
         </Form.Item>
       
