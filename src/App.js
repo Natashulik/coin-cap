@@ -15,7 +15,7 @@ const App = () => (
     }}
   >
      <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/coincap" element={<Main />} />
           <Route path="/crypto" element={<Crypto />} />
       </Routes>
     
