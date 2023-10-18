@@ -46,6 +46,7 @@ const CryptosTable = () => {
             dataIndex: 'rank',
             key: 'rank',
             sorter: (a,b) => a.rank -b.rank,
+            responsive: ['sm', 'md', 'lg', 'xl', 'xxl']
           },
           {
             title: 'Symbol',
@@ -73,7 +74,8 @@ const CryptosTable = () => {
             sorter: (a,b) => a.priceUsd -b.priceUsd,
             render: (price) => (
               <p>{formatedPrice(price)} $</p>
-            )
+            ),
+            responsive: ['xs', 'sm', 'md', 'lg', 'xl', 'xxl']
           },
           {
             title: 'VWAP(24Hr)',
@@ -93,7 +95,8 @@ const CryptosTable = () => {
               change24<0 ? 
                 <p className="negative_percent">{formatedPercent(change24)} %</p> :
                 <p className="positive_percent">{formatedPercent(change24)} %</p>
-             )
+             ),
+             responsive: ['sm', 'md', 'lg', 'xl', 'xxl']
           },
           {
             title: 'Market Cap',
@@ -111,7 +114,8 @@ const CryptosTable = () => {
             key: '',
             render: (row) => (
               <PlusSquareTwoTone style={{ fontSize: '20px'}} twoToneColor='#00B96B' onClick={event => handleIconClick( row, event)}/>
-            )
+            ),
+            responsive: [ 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']
           },
         ];
 

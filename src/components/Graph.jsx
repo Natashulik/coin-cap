@@ -77,7 +77,7 @@ const Graph= () => {
    <div className={selectedButton==='1Y'? 'switch_button active' : 'switch_button'} 
    onClick={()=>handleClickInterval('d1', '1Y')}> Y </div>
    </div>
-         <LineChart width={580} height={350} data={updatedHistory}
+         <LineChart width={550} height={350} data={updatedHistory}
         dot={{ stroke: 'red', strokeWidth: 2 }}
 
          >

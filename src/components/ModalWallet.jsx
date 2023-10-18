@@ -19,21 +19,7 @@ console.log(walletCryptos);
     const  changePercent = (totalCurrent-totalParchase)/totalParchase*100;
     const dispatch = useDispatch(); 
 
-   /* useEffect(() => {
-        const fetchData = async () => {
-          walletCryptos.map(async (item) => {
-            try {
-              const newData = await fetchCrypto(item.id);
-                  dispatch(setPriceCurrent({...item, priceCurrent:  newData.data.priceUsd}));
-            } catch (error) {
-              console.log(error);
-            }
-          })
-        }
-        fetchData();
-      }, [])*/
-
-        useEffect(() => {
+    useEffect(() => {
         console.log(walletCryptos);
       }, [walletCryptos])
     
@@ -52,11 +38,13 @@ const columns = [
         title: 'Name',
         dataIndex: 'name',
         key: 'name',
+        responsive: [ 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']
     },
     {
         title: 'Quantity',
         dataIndex: 'quantity',
         key: 'quantity',
+        responsive: [ 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']
     },
     {
         title: 'Purchase price ($)',
@@ -64,7 +52,8 @@ const columns = [
         key: 'price',
         render: (price) => (
             <p>{formatedPrice(price)} </p>
-        )
+        ),
+        responsive: [ 'sm', 'md', 'lg', 'xl', 'xxl']
     },
     {
         title: 'Current price ($)',
@@ -72,7 +61,8 @@ const columns = [
         key: 'priceCurrent',
         render: (priceCurrent) => (
             <p>{formatedPrice(priceCurrent)} </p>
-        )
+        ),
+        responsive: [ 'sm', 'md', 'lg', 'xl', 'xxl']
     },
     {
         title: 'Change price(%)',
@@ -81,6 +71,7 @@ const columns = [
         render: (item) => (
             <span >{formatedPercent(((item.priceCurrent-item.price)/item.price)*100)} %</span>
            ),
+        responsive: [ 'xl', 'xxl']
     },
     {
         title: 'Delete',
@@ -98,7 +89,7 @@ const columns = [
         <CloseOutlined className="close_wallet_icon"
             style={{ fontSize: '20px', color: 'lightgray' }}
             onClick={handleClose} />
-        <p></p>
+      
 
         <ConfigProvider
             theme={{
@@ -107,13 +98,21 @@ const columns = [
                     colorBgContainer: 'rgba(188, 253, 128, 0.1)',
                 },
             }}
+       
         >
              <Table className="wallet_table" dataSource={walletCryptos}
                 columns={columns}
                 rowKey="name"
                 pagination={false}
-            /> 
-        </ConfigProvider>
+                responsive={{
+                    xs: false, 
+                    sm: true, 
+                    md: true,
+                    xl: true, 
+                    xxl: true, 
+                  }}
+                  />
+           </ConfigProvider>
 
         <p className="modal_wallet_total"> Total parchase: {formatedPrice(totalParchase)} $ </p>
         <p className="modal_wallet_total"> Total current:  {formatedPrice(totalCurrent)} $ </p>

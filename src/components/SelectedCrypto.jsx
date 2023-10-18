@@ -72,15 +72,12 @@ const SelectedCrypto = () => {
             </Form.Item>
             
             <Form.Item
-                wrapperCol={{
-                    offset: 9,
-                    span: 16
-                }}
+              
                 style={{ marginBottom: "10px" }}
             >
                 <Button type="primary" htmlType="submit" 
                 style={{ width: "100px", fontFamily: "Open Sans", fontSize: "16px", paddingTop: "0",
-                borderRadius: "4px", marginBottom: "5px"  }} 
+                borderRadius: "4px", marginBottom: "5px", marginLeft: "130px"  }} 
                 onClick={onReset}
               >
                     Buy </Button>
