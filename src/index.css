@@ -202,16 +202,16 @@ transition: box-shadow 0.3s ease;
 
 .graph_block {
     width: 550px;
-    height: 450px; 
+    max-height: 450px; 
     margin-right: 1%;;
     
 }
 
 .info_table {
-    width: 500px;
+    max-width: 500px;
     font-size: 18px;
     margin-top: 20px;
-    margin-left: 2%;
+
    
 }
 
@@ -359,31 +359,24 @@ padding-left: 5px;
     .detailed_block {
         flex-direction: column;
         justify-content: flex-start;
+        align-items: center;
     }
 
     .modal_wallet {
        width: 90%;
     }
 
-
- .recharts-wrapper {
-    width: 500px;
- }
- .recharts-surface { 
-    width: 90%;
-   }
-
    .graph_block {
-    width: 100%;
-   
-}
+    width: 550px;
+  }
 
 }
 
 @media(max-width: 650px) {
     .main_info_block {
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: start;
+       
         margin-bottom: 20px;
     }
 
@@ -394,8 +387,22 @@ padding-left: 5px;
     .wallet_block  {
         margin-top: 0;
     }
+    .info_table {
+        max-width: 90%;
+    }
 
+ }
 
+@media(max-width: 580px) {
+    .graph_block {
+        width: 95%;
+      }
+      .info_table {
+        width: 100%;
+      }
+      .selected_crypto  {
+        width: 95%;
+      }
 }
 
 @media(max-width: 350px) {
@@ -413,4 +420,10 @@ padding-left: 5px;
         margin-bottom: 5px;
     }
 
+    .ant-divider {
+      font-size: 0.7 rem;
+    }
+    .ant-divider-inner-text {
+        padding-inline: 0;
+    }
 }

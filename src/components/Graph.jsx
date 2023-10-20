@@ -1,5 +1,5 @@
 import React from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer} from 'recharts';
 import {fetchHistory  } from "../helpers/fetchHistory";
 import { setHistoryData, setInterval, setSelectedButton } from '../redux/cryptoSlice';
 import { useSelector, useDispatch } from 'react-redux';
@@ -77,9 +77,10 @@ const Graph= () => {
    <div className={selectedButton==='1Y'? 'switch_button active' : 'switch_button'} 
    onClick={()=>handleClickInterval('d1', '1Y')}> Y </div>
    </div>
+
+   <ResponsiveContainer width="100%" aspect={2}>
          <LineChart width={550} height={350} data={updatedHistory}
         dot={{ stroke: 'red', strokeWidth: 2 }}
-
          >
            <CartesianGrid stroke="lightgray" strokeDasharray="3 3" />
     <XAxis dataKey="date" />
@@ -89,6 +90,7 @@ const Graph= () => {
     <Line type="monotone" dataKey="priceUsd" stroke="red" dot={false} />
     <Tooltip />
   </LineChart>
+  </ResponsiveContainer>
         </div>
 }
 

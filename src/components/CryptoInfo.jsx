@@ -2,7 +2,6 @@ import React from 'react';
 import { Col, Divider, Row } from 'antd';
 import { useSelector } from 'react-redux';
 import { formatedPrice, formatedMillion, formatedPercent} from '../helpers/formatedData';
-import { Link } from 'react-router-dom';
 
 const style1 = {
   background: 'rgba(215, 255, 211, 0.4)',
@@ -41,16 +40,4 @@ const CryptoInfo = () => {
      </div>
 }
 
-/*changePercent24Hr"-2.3087982229661712" +
-explorer: "https://blockchain.info/"
-id: "bitcoin" +
-marketCapUsd: "528103411406.3876487421949385" +
-maxSupply: "21000000.0000000000000000"+
-name: "Bitcoin"+
-priceUsd: "27067.8774747144372105"+
-rank: "1"
-supply: "19510337.0000000000000000"+
-symbol: "BTC"
-volumeUsd24Hr: "3392538410.9169407687883476"
-vwap24Hr: "27400.8921004413405808"*/
 export default CryptoInfo;
