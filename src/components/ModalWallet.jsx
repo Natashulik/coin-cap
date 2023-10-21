@@ -88,7 +88,6 @@ const columns = [
     },
 ]
 
-
     return <div className="modal_wallet">
         <div className="modal_buy_title"> Wallet   </div>
         <CloseOutlined className="close_wallet_icon"
@@ -118,16 +117,19 @@ const columns = [
                   }}
                   />
            </ConfigProvider>
-
+          
           { totalParchase && <p className="modal_wallet_total"> Total parchase: {formatedPrice(totalParchase)} $ </p>}
-       {totalCurrent && <p className="modal_wallet_total"> Total current:  {formatedPrice(totalCurrent)} $ </p>}
-       {totalParchase && totalCurrent && <div className="wallet_result"> 
+
+          {totalCurrent && <p className="modal_wallet_total"> Total current:  {formatedPrice(totalCurrent)} $ </p>}
+
+        {totalParchase && totalCurrent && <div className="wallet_result"> 
            <p className="change_result"> {formatedPrice(totalParchase)} $ <img src={arrow}  className="arrow" alt='arrow'/> 
          {formatedPrice(totalCurrent)} $   </p>
          {walletCryptos.length>0 &&  <p className={changePercent>=0 ? "positive_percent change_percent" : "negative_percent change_percent"}>   
          ( {formatedPrice(changeParchase)} $  / {formatedPercent(changePercent)} %) 
             </p>  }
          </div>}
+         
     </div>
 
 }

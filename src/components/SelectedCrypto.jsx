@@ -1,4 +1,4 @@
-import { Button, Form, Input, Typography } from 'antd';
+import { Button, Form, Input, Typography,Row } from 'antd';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { setCryptoQuantity } from "../redux/cryptoSlice";
@@ -57,7 +57,7 @@ const SelectedCrypto = () => {
             <span className="selected_symbol">{symbol}</span>
         </div>
   
-        <Form
+        <Form className='selected_form'
             name="basic"
             style={{
                 maxWidth: 600               
@@ -90,18 +90,14 @@ const SelectedCrypto = () => {
              </Typography.Text>
             </Form.Item>
             
-            <Form.Item
-              
-                style={{ marginBottom: "10px" }}
-            >
-                <Button type="primary" htmlType="submit" 
+      
+            <Button type="primary" htmlType="submit" className="selected_button"
                 style={{ width: "100px", fontFamily: "Open Sans", fontSize: "16px", paddingTop: "0",
                 borderRadius: "4px", marginBottom: "5px", marginLeft: "130px"  }} 
                 onClick={onReset}
               >
                     Buy </Button>
-            </Form.Item>
-          
+    
         </Form>
     </div>
 }
