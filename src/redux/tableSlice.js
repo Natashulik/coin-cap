@@ -3,7 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
    cryptos: [],
    selectedCrypto: {},
-   isModalBuyOpen: false
+   isModalBuyOpen: false,
+   inputText: '',
+   filtredCryptos: [],
+   isFiltered: false
  }
 
 export const tableSlice = createSlice({
@@ -19,9 +22,19 @@ export const tableSlice = createSlice({
       setIsModalBuyOpen: (state, action) => {
         state.isModalBuyOpen = action.payload;
       },
+      setInputText: (state, action) => {
+        state.inputText = action.payload;
+      },
+      setFiltredCryptos: (state, action) => {
+        state.filtredCryptos = action.payload;
+      },
+      setIsFiltered: (state, action) => {
+        state.isFiltered = action.payload;
+      },
+
 
     }
   })
   
-  export const { setCryptos, setSelectedCrypto, setIsModalBuyOpen } = tableSlice.actions;
+  export const { setCryptos, setSelectedCrypto, setIsModalBuyOpen, setInputText, setFiltredCryptos,  setIsFiltered } = tableSlice.actions;
   export default tableSlice.reducer;

@@ -16,7 +16,7 @@ body {
 
 .wrapper {
     max-width: 1280px;
-    min-height: 1000px;
+   /* min-height: 1000px;*/
     background-color: white;
     margin: 0 auto;
     display: flex;
@@ -104,7 +104,7 @@ body {
 
 .popular_block {
 width: 330px;
-margin-bottom:  30px;
+margin-bottom:  15px;
 padding: 10px;
 }
 
@@ -230,7 +230,7 @@ transition: box-shadow 0.3s ease;
 .modal_buy {
     width: 400px;
     position: absolute;
-    top: 100px;
+    top: 110px;
     left : 50%;
     transform: translateX(-50%);
     z-index: 2; 
@@ -351,6 +351,31 @@ padding-left: 5px;
     padding-top: 5px;
 }
 
+.search_block {
+    width: 390px;
+    height: 80px;
+    background-color: #f6ffed; 
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 3px;
+    padding: 10px 20px 0px;
+    align-self: center;
+    margin-bottom: 30px; 
+    font-family: 'Roboto','Helvetica Neue', 'Arial';
+}
+
+.search_item {
+    margin-top: 12px;
+    font-family: 'Roboto','Helvetica Neue', 'Arial';
+}
+
+.search_input {
+    background-color: rgb(159, 250, 166, 0.3);
+    font-size: 17px;
+}
+
+.search_block .ant-input {
+    font-family: 'Segoe UI', 'Tahoma','Geneva', 'Verdana', sans-serif;
+}
 
 
 /*-------adaptive-----------*/
@@ -403,6 +428,10 @@ padding-left: 5px;
       .selected_crypto  {
         width: 95%;
       }
+
+      .search_block {
+        width: 80%;
+      }
 }
 
 @media(max-width: 350px) {
@@ -426,4 +455,9 @@ padding-left: 5px;
     .ant-divider-inner-text {
         padding-inline: 0;
     }
+
+    .search_block {
+        width: 95%;
+      }
+
 }

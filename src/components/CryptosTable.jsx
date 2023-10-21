@@ -9,11 +9,14 @@ import { formatedPrice, formatedPercent,formatedMillion} from "../helpers/format
 import {PlusSquareTwoTone} from "@ant-design/icons";
 import { useNavigate } from "react-router";
 import { setSelectedCrypto, setIsModalBuyOpen } from "../redux/tableSlice";
+import { saveSelectedCrypto } from "../helpers/localStorage";
 
 
 const CryptosTable = () => {
   const cryptos = useSelector(state => state.table.cryptos);
   const selectedCrypto = useSelector(state => state.table.selectedCrypto);
+  const filtredCryptos = useSelector(state => state.table.filtredCryptos);
+  const isFiltered = useSelector(state => state.table.isFiltered);
   const dispatch = useDispatch();
 
    const fetchData = async () => {
@@ -30,6 +33,7 @@ const CryptosTable = () => {
 
          const handleRowClick = (row, event) => {
            dispatch(setSelectedCrypto(row))
+           saveSelectedCrypto(row);
             navigate("/crypto");
           }
 
@@ -128,7 +132,9 @@ const CryptosTable = () => {
               },
         }}
       >
-            <Table dataSource={cryptos}
+            <Table dataSource={ isFiltered && filtredCryptos.length > 0 ? filtredCryptos : 
+                                isFiltered && filtredCryptos.length === 0 ?  []: 
+                                cryptos}
          columns={columns}
          rowKey="id"
          onRow={(row) => ({

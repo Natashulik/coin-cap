@@ -5,12 +5,14 @@ import {  setWalletAmount, setWalletCryptos} from '../redux/walletSlice';
 import { formatedPrice } from '../helpers/formatedData';
 import {CloseOutlined} from "@ant-design/icons";
 import { setIsModalBuyOpen } from '../redux/tableSlice';
+import { saveWalletCryptos } from '../helpers/localStorage';
 
 
 const ModalBuy = () => {
     const {id,  name, priceUsd  } = useSelector(state => state.table.selectedCrypto);
     const cryptoQuantity = useSelector(state => state.crypto.cryptoQuantity);
     const walletAmount = useSelector(state => state.wallet.walletAmount);
+    const walletCryptos = useSelector(state => state.wallet.walletCryptos);
    
     const dispatch= useDispatch();
 
@@ -23,7 +25,15 @@ const ModalBuy = () => {
         dispatch(setWalletCryptos({id: id, name: name, quantity: cryptoQuantity, price: priceUsd}))
         dispatch(setCryptoQuantity(0));
         dispatch(setIsModalBuyOpen(false));
-   };
+        
+        const existingCrypto = walletCryptos.find(crypto => crypto.id === id);
+        if (existingCrypto) {
+            const updatedWalletCryptos = [...walletCryptos];
+              const updatedCrypto = {...existingCrypto, quantity: existingCrypto.quantity + cryptoQuantity};
+                 updatedWalletCryptos[walletCryptos.indexOf(existingCrypto)] = updatedCrypto;
+                saveWalletCryptos(updatedWalletCryptos);
+       } else  saveWalletCryptos([...walletCryptos, {id: id, name: name, quantity: cryptoQuantity, price: priceUsd} ]);
+    }
 
    const onFinishFailed = (errorInfo) => {
        console.log("Failed:", errorInfo);

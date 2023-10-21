@@ -1,12 +1,17 @@
 import { Button, Form, Input, Typography } from 'antd';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { setCryptoQuantity } from "../redux/cryptoSlice";
 import { setWalletAmount, setWalletCryptos} from "../redux/walletSlice";
 import { formatedPrice } from '../helpers/formatedData';
+import { loadSelectedCrypto, saveWalletCryptos } from '../helpers/localStorage';
+import { setSelectedCrypto } from '../redux/tableSlice';
+
 
 const SelectedCrypto = () => {
     const { id, name, symbol, priceUsd  } = useSelector(state => state.table.selectedCrypto);
     const cryptoQuantity = useSelector(state => state.crypto.cryptoQuantity);
+    const walletCryptos = useSelector(state => state.wallet.walletCryptos);
     const walletAmount = useSelector(state => state.wallet.walletAmount);
     const amount = formatedPrice(cryptoQuantity*priceUsd);
    
@@ -17,11 +22,25 @@ const SelectedCrypto = () => {
 
     }
 
+    useEffect(() => {
+        const savedSelectedCrypto= loadSelectedCrypto();
+         dispatch(setSelectedCrypto(savedSelectedCrypto))
+       }, [])
+
     const onFinish = (values) => {
       dispatch(setWalletAmount(walletAmount + cryptoQuantity*priceUsd));
       dispatch(setWalletCryptos({id: id, name: name, quantity: cryptoQuantity, price: priceUsd}))
       dispatch(setCryptoQuantity(0))
-   
+
+       
+      const existingCrypto = walletCryptos.find(crypto => crypto.id === id);
+      if (existingCrypto) {
+          const updatedWalletCryptos = [...walletCryptos];
+            const updatedCrypto = {...existingCrypto, quantity: existingCrypto.quantity + cryptoQuantity};
+               updatedWalletCryptos[walletCryptos.indexOf(existingCrypto)] = updatedCrypto;
+              saveWalletCryptos(updatedWalletCryptos);
+     } else  saveWalletCryptos([...walletCryptos, {id: id, name: name, quantity: cryptoQuantity, price: priceUsd} ]);
+     
        };
 
    const onFinishFailed = (errorInfo) => {

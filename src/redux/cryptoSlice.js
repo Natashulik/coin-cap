@@ -4,8 +4,8 @@ const initialState = {
    cryptoQuantity: 0,
    historyData: [],
    interval: 'h1',
-   selectedButton: '24H'
- }
+   selectedButton: '24H',
+    }
 
 export const cryptoSlice = createSlice({
     name: "crypto",

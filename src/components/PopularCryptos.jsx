@@ -1,8 +1,12 @@
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 import { formatedPrice } from "../helpers/formatedData";
 import { useNavigate } from "react-router";
 import { useDispatch } from "react-redux";
 import { setSelectedCrypto } from "../redux/tableSlice";
+import { loadSelectedCrypto } from "../helpers/localStorage";
+import { setCryptos } from "../redux/tableSlice";
+import { fetchAllCryptos } from "../helpers/fetchAllCryptos";
 
 const PopularCryptos = () => {
     const cryptos = useSelector(state => state.table.cryptos);
@@ -24,6 +28,15 @@ const PopularCryptos = () => {
       dispatch(setSelectedCrypto(crypto))
       navigate("/crypto");
       }
+
+      const fetchData = async () => {
+        const res = await fetchAllCryptos(); 
+        dispatch(setCryptos(res.data));
+   } 
+    
+      useEffect(() => {
+           fetchData();
+      }, [])
     
    return  <div className='popular_block'>
         <p className="popular_title"> Popular cryptocurrencies:</p>

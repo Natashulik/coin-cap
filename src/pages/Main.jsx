@@ -5,6 +5,7 @@ import Wallet from "../components/Wallet";
 import ModalBuy from "../components/ModalBuy";
 import { useSelector } from "react-redux";
 import ModalWallet from "../components/ModalWallet";
+import Search from "../components/Search";
 
 const Main = () => {
   const isModalBuyOpen = useSelector(state => state.table.isModalBuyOpen)
@@ -16,6 +17,7 @@ const Main = () => {
         <PopularCryptos />
         <Wallet />
       </div>
+      <Search />
       <CryptosTable />
       {isModalBuyOpen && <div className="overlay"> <ModalBuy /> </div>}
       {isModalWalletOpen && <div className="overlay"> <ModalWallet /> </div>}

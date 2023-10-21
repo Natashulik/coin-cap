@@ -31,9 +31,13 @@ export const walletSlice = createSlice({
       },
       deleteWalletCrypto: (state, action) =>  {
         state.walletCryptos = state.walletCryptos.filter(item => item.id != action.payload);
-      }
+      },
+      setStorageData: (state, action) =>  {
+        state.walletCryptos = action.payload;
+      },
     }
   })
   
-  export const { setIsModalWalletOpen, setWalletAmount, setWalletCryptos, setPriceCurrent, deleteWalletCrypto } = walletSlice.actions;
+  export const { setIsModalWalletOpen, setWalletAmount, setWalletCryptos, setPriceCurrent, deleteWalletCrypto,
+    setStorageData } = walletSlice.actions;
   export default walletSlice.reducer;

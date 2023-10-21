@@ -2,11 +2,13 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { Table, ConfigProvider } from "antd";
 import { CloseOutlined } from "@ant-design/icons";
-import { setIsModalWalletOpen,setWalletCryptos, setPriceCurrent, deleteWalletCrypto } from "../redux/walletSlice";
+import { setIsModalWalletOpen,setWalletCryptos, setPriceCurrent, deleteWalletCrypto,getStorageData } from "../redux/walletSlice";
 import { DeleteTwoTone } from "@ant-design/icons";
 import { formatedPrice, formatedPercent } from "../helpers/formatedData";
 import { fetchCrypto } from "../helpers/fetchCrypto";
 import arrow from "../assets/arrow3.png";
+import { loadWalletCryptos } from "../helpers/localStorage";
+import { saveWalletCryptos } from "../helpers/localStorage";
 
 
 const ModalWallet = () => {
@@ -22,10 +24,13 @@ console.log(walletCryptos);
     useEffect(() => {
         console.log(walletCryptos);
       }, [walletCryptos])
-    
+
+        
       const handleDelete =  (id) => {
         console.log(id)
         dispatch(deleteWalletCrypto(id));
+
+        saveWalletCryptos(walletCryptos.filter(item =>item.id !== id));
       }
   
     const handleClose = () => {
@@ -114,15 +119,15 @@ const columns = [
                   />
            </ConfigProvider>
 
-        <p className="modal_wallet_total"> Total parchase: {formatedPrice(totalParchase)} $ </p>
-        <p className="modal_wallet_total"> Total current:  {formatedPrice(totalCurrent)} $ </p>
-        <div className="wallet_result"> 
+          { totalParchase && <p className="modal_wallet_total"> Total parchase: {formatedPrice(totalParchase)} $ </p>}
+       {totalCurrent && <p className="modal_wallet_total"> Total current:  {formatedPrice(totalCurrent)} $ </p>}
+       {totalParchase && totalCurrent && <div className="wallet_result"> 
            <p className="change_result"> {formatedPrice(totalParchase)} $ <img src={arrow}  className="arrow" alt='arrow'/> 
          {formatedPrice(totalCurrent)} $   </p>
          {walletCryptos.length>0 &&  <p className={changePercent>=0 ? "positive_percent change_percent" : "negative_percent change_percent"}>   
          ( {formatedPrice(changeParchase)} $  / {formatedPercent(changePercent)} %) 
             </p>  }
-         </div>
+         </div>}
     </div>
 
 }
