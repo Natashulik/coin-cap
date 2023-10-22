@@ -1,4 +1,4 @@
-import {  ConfigProvider, Input } from 'antd';
+import { ConfigProvider } from 'antd';
 import React from 'react';
 import { Route, Routes } from 'react-router';
 import Main from './pages/Main';
@@ -14,12 +14,10 @@ const App = () => (
       },
     }}
   >
-     <Routes>
-          <Route path="/coin-cap" element={<Main />} />
-          <Route path="/crypto" element={<Crypto />} />
-      </Routes>
-    
-
+    <Routes>
+      <Route path="/coin-cap" element={<Main />} />
+      <Route path="/crypto" element={<Crypto />} />
+    </Routes>
   </ConfigProvider>
 );
 

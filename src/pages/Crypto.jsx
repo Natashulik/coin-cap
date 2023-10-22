@@ -12,8 +12,8 @@ const Crypto = () => {
   const isModalWalletOpen = useSelector(state => state.wallet.isModalWalletOpen)
 
   return <div >
-     <div className='wrapper'>
-     <Header />
+    <div className='wrapper'>
+      <Header />
       <div className="main_info_block">
         <PopularCryptos />
         <Wallet />

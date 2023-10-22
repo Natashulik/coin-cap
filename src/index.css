@@ -3,223 +3,202 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-
- }
-
+  box-sizing: border-box;
+  margin: 0;
+}
 
 body {
-    font-family: 'Open Sans';
-   
+  font-family: 'Open Sans';
 }
 
 .wrapper {
-    max-width: 1280px;
-    background-color: white;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-
-
-
-.header {
-    font-family: 'Poppins';
-    background-color: #f6ffed;
-    width: 100%;
-    height: 70px;
-    display: flex;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 1280px;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
+.header {
+  font-family: 'Poppins';
+  background-color: #f6ffed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  margin-bottom: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 .header_title {
-    line-height: 70px;
+  line-height: 70px;
 }
 
 .first_letter {
-   color:#00B96B;
+  color: #00B96B;
 }
 
 .logo_block {
-    display: flex;
-    margin-left: 2%;
-    color: black;
-    text-decoration: none;
-
-
+  display: flex;
+  margin-left: 2%;
+  color: black;
+  text-decoration: none;
 }
 
 .logo_image {
-    width: 53px;
-    height: 50px;
-    margin: 10px;
+  width: 53px;
+  height: 50px;
+  margin: 10px;
 }
 
 .ant-input {
-    font-family: 'Poppins';
-    font-size: 16px;
-    max-width: 700px;
-    display: block;
-    align-items: center;
-    margin: 0 auto;
+  font-family: 'Poppins';
+  font-size: 16px;
+  max-width: 700px;
+  display: block;
+  align-items: center;
+  margin: 0 auto;
 }
 
-.ant-table-wrapper .ant-table-tbody >tr >td {
-    border-bottom: 1px solid #dbe4dc;
-    font-size: 16px;
- 
+.ant-table-wrapper .ant-table-tbody>tr>td {
+  border-bottom: 1px solid #dbe4dc;
+  font-size: 16px;
 }
 
 .ant-table-thead {
-   background-color: rgb(159, 250, 166, 0.3);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-   
+  background-color: rgb(159, 250, 166, 0.3);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-
-
 .crypto_icon {
-    margin-right: 10px;
-    vertical-align: middle;
- 
+  margin-right: 10px;
+  vertical-align: middle;
 }
 
 .negative_percent {
-    color: red;
+  color: red;
 }
+
 .positive_percent {
-    color: #00B96B;
+  color: #00B96B;
 }
 
 .main_info_block {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2%;
 }
 
 .popular_block {
-width: 330px;
-margin-bottom:  15px;
-padding: 10px;
+  width: 330px;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
 .wallet_block {
-    background-color: #f6ffed;
-     border-radius: 3px;
-    display: flex;
-    width: 230px;
-    height: 80px;
-    margin-top: 25px;
-    padding: 10px;
-    transition: box-shadow 0.3s ease;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #f6ffed;
+  border-radius: 3px;
+  display: flex;
+  width: 230px;
+  height: 80px;
+  margin-top: 25px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .wallet_block:hover {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  background-color:  rgba(159, 250, 160, 0.4);
-
+  background-color: rgba(159, 250, 160, 0.4);
 }
 
 .popular_title {
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: gray;
-
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: gray;
 }
 
 .popular_cryptos {
-     display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .popular_cryptos_item {
-width: 90px;
-padding: 5px;
-border-radius: 3px;
-background-color: #f6ffed;
-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-transition: box-shadow 0.3s ease;
+  width: 90px;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: #f6ffed;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
 }
 
 .popular_cryptos_item:hover {
-    background-color: rgba(159, 250, 160, 0.4);
-    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-
+  background-color: rgba(159, 250, 160, 0.4);
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .popular_name {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .wallet_image {
- width: 40px;
- margin-right: 20px;
-
+  width: 40px;
+  margin-right: 20px;
 }
 
 .wallet_total {
-    display: flex;
-   flex-direction: column;
-   justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .selected_crypto {
-    width: 400px;
-    box-shadow: 0px 2px 4px 1px rgba(99, 202, 108, 0.7);
-    border-radius: 3px;
-    padding: 10px 20px 0px;
-    align-self: center;
-    margin-bottom: 30px;
-  }
-
+  width: 400px;
+  box-shadow: 0px 2px 4px 1px rgba(99, 202, 108, 0.7);
+  border-radius: 3px;
+  padding: 10px 20px 0px;
+  align-self: center;
+  margin-bottom: 30px;
+}
 
 .selected_title {
-    font-size: 22px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 15px;
-
+  font-size: 22px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .selected_name {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .selected_symbol {
-    font-size: 20px;
-    font-weight: 100;
+  font-size: 20px;
+  font-weight: 100;
 }
+
 .detailed_block {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .graph_block {
-    width: 550px;
-    max-height: 450px; 
-    margin-right: 1%;;
-    
+  width: 550px;
+  max-height: 450px;
+  margin-right: 1%;
 }
 
 .info_table {
-    max-width: 500px;
-    font-size: 18px;
-    margin-top: 20px;
-
-   
+  max-width: 500px;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 .modal_buy_title {
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    margin-bottom: 15px;
-    
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 .modal_buy_name {
@@ -227,281 +206,288 @@ transition: box-shadow 0.3s ease;
 }
 
 .modal_buy {
-    width: 400px;
-    position: absolute;
-    top: 110px;
-    left : 50%;
-    transform: translateX(-50%);
-    z-index: 2; 
-    background-color: white;
-    border-radius: 3px;
-    padding: 10px 20px 0px;
-    align-self: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-   }
+  width: 400px;
+  position: absolute;
+  top: 110px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: white;
+  border-radius: 3px;
+  padding: 10px 20px 0px;
+  align-self: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
-   .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1; 
-  }
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
 
-  .close_icon {
-   position: absolute;
-   right: 15px;
-   top: 5px;
-    }
+.close_icon {
+  position: absolute;
+  right: 15px;
+  top: 5px;
+}
 
-   .close_icon:hover {
-    color:gray !important;
-  }
+.close_icon:hover {
+  color: gray !important;
+}
 
-  .switch_interval {
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-    height: 30px;
-    background-color: rgba(197, 250, 192, 0.5);
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    margin-left: 65px;
-  } 
+.switch_interval {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 30px;
+  background-color: rgba(197, 250, 192, 0.5);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  margin-left: 65px;
+}
 
-  .switch_button {
-    width: 37px;
-    height: 22px;
-    text-align: center;
-    border-radius: 7px;
-    padding: 1px;
-  }
+.switch_button {
+  width: 37px;
+  height: 22px;
+  text-align: center;
+  border-radius: 7px;
+  padding: 1px;
+}
 
-  .switch_button.active {
-    background-color: white;
-    color:#00b96b;
-  }
+.switch_button.active {
+  background-color: white;
+  color: #00b96b;
+}
 
+.modal_wallet {
+  width: 800px;
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  background-color: white;
+  border-radius: 3px;
+  padding: 20px 20px;
+  align-self: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
 
-  .modal_wallet {
-    width: 800px;
-    position: relative;
-    top: 100px;
-    left : 50%;
-    transform: translateX(-50%);
-    z-index: 2; 
-    background-color: white;
-    border-radius: 3px;
-    padding: 20px 20px;
-    align-self: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-  }
+.close_wallet_icon {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+}
 
-  .close_wallet_icon {
-    position: absolute;
-    right: 20px;
-    top: 10px;
-  }
+.wallet_table {
+  background-color: white;
+  margin-bottom: 15px;
+}
 
-  .wallet_table {
-    background-color: white;
-    margin-bottom: 15px;
-  }
+.wallet_table .ant-table-thead {
+  background-color: rgb(159, 250, 166, 0.3);
+  box-shadow: none;
 
-  .wallet_table .ant-table-thead {
-    background-color: rgb(159, 250, 166, 0.3);
-    box-shadow: none;
-   
 }
 
 .modal_wallet_total {
-margin-bottom: 10px;
-font-size: 16px;
-
-padding-left: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding-left: 5px;
 }
 
 .wallet_result {
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 600;
-    padding-left: 5px;
-    display: flex;
-
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  padding-left: 5px;
+  display: flex;
 }
 
 .arrow {
-    width: 40px;
-    vertical-align: middle;
-
+  width: 40px;
+  vertical-align: middle;
 }
 
 .change_result {
-    margin-right: 10px;
- }
+  margin-right: 10px;
+}
 
 .change_parchase,
 .change_percent {
-    vertical-align: middle;
-    padding-top: 5px;
+  vertical-align: middle;
+  padding-top: 5px;
 }
 
 .search_block {
-    width: 390px;
-    height: 80px;
-    background-color: #f6ffed; 
-    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
-    border-radius: 3px;
-    padding: 10px 20px 0px;
-    align-self: center;
-    margin-bottom: 30px; 
-    font-family: 'Roboto','Helvetica Neue', 'Arial';
+  width: 390px;
+  height: 80px;
+  background-color: #f6ffed;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  padding: 10px 20px 0px;
+  align-self: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', 'Helvetica Neue', 'Arial';
 }
 
 .search_item {
-    margin-top: 12px;
-    font-family: 'Roboto','Helvetica Neue', 'Arial';
+  margin-top: 12px;
+  font-family: 'Roboto', 'Helvetica Neue', 'Arial';
 }
 
 .search_input {
-    background-color: rgb(159, 250, 166, 0.3);
-    font-size: 17px;
+  background-color: rgb(159, 250, 166, 0.3);
+  font-size: 17px;
 }
 
 .search_block .ant-input {
-    font-family: 'Segoe UI', 'Tahoma','Geneva', 'Verdana', sans-serif;
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
 }
-
 
 /*-------adaptive-----------*/
 
 @media(max-width: 900px) {
-    .detailed_block {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-    }
 
-    .modal_wallet {
-       width: 90%;
-    }
+  .detailed_block {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
 
-   .graph_block {
+  .modal_wallet {
+    width: 90%;
+  }
+
+  .graph_block {
     width: 550px;
   }
 
 }
 
 @media(max-width: 650px) {
-    .main_info_block {
-        flex-direction: column-reverse;
-        justify-content: start;
-        margin-bottom: 20px;
-    }
 
-    .popular_block {
-        margin-bottom: 0;
-    
-    }
+  .main_info_block {
+    flex-direction: column-reverse;
+    justify-content: start;
+    margin-bottom: 20px;
+  }
 
-    .wallet_block  {
-        margin-top: 10px;
-       
-    }
-    .info_table {
-        max-width: 90%;
-    }
+  .popular_block {
+    margin-bottom: 0;
+  }
 
- }
+  .wallet_block {
+    margin-top: 10px;
+  }
+
+  .info_table {
+    max-width: 90%;
+  }
+
+}
 
 @media(max-width: 580px) {
-    .graph_block {
-        width: 95%;
-          }
 
-      .info_table {
-        width: 100%;
-      }
-   
-      .search_block {
-        width: 80%;
-      }
-      .wallet_result {
-       flex-direction: column;
-       padding-left: 10px;
-      }
-      .modal_wallet_total {
-        padding-left: 10px;
-    }
+  .graph_block {
+    width: 95%;
+  }
+
+  .info_table {
+    width: 100%;
+  }
+
+  .search_block {
+    width: 80%;
+  }
+
+  .wallet_result {
+    flex-direction: column;
+    padding-left: 10px;
+  }
+
+  .modal_wallet_total {
+    padding-left: 10px;
+  }
+
 }
- @media(max-width: 450px) {
- .modal_wallet {
+
+@media(max-width: 450px) {
+
+  .modal_wallet {
     padding: 20px 0;
     width: 100%;
- }
- .modal_buy{
+  }
+
+  .modal_buy {
     width: 95%;
- }
- .selected_crypto {
+  }
+
+  .selected_crypto {
     width: 95%;
- }
- .switch_interval {
-margin-left: 10px;
- }
- .ant-btn-primary {
-   margin-left: 0;
- }
+  }
+
+  .switch_interval {
+    margin-left: 10px;
+  }
+
+  .ant-btn-primary {
+    margin-left: 0;
+  }
 
 }
 
 @media(max-width: 350px) {
-    .popular_block {
-        width: 200px;
-        padding-bottom: 0;
-     
-    }
- 
-    .popular_cryptos {
-        display: flex;
-        flex-direction: column;
-       
-    }
 
-    .popular_cryptos_item {
-        margin-bottom: 10px;
-    }
-    .wallet_block  {
-        width: 100%;
-    }
+  .popular_block {
+    width: 200px;
+    padding-bottom: 0;
+  }
 
+  .popular_cryptos {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .ant-divider {
-      font-size: 0.7 rem;
-    }
-    .ant-divider-inner-text {
-        padding-inline: 0;
-    }
+  .popular_cryptos_item {
+    margin-bottom: 10px;
+  }
 
-    .search_block {
-        width: 95%;
-        margin-bottom: 15px;
-      }
+  .wallet_block {
+    width: 100%;
+  }
 
-      .selected_crypto {
-        width: 280px;
-     }
-     .selected_button {
-        right: 20%;
-     
-     }
-     .selected_form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-     }
-     
-  
+  .ant-divider {
+    font-size: 0.7 rem;
+  }
+
+  .ant-divider-inner-text {
+    padding-inline: 0;
+  }
+
+  .search_block {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  .selected_crypto {
+    width: 280px;
+  }
+
+  .selected_button {
+    right: 20%;
+
+  }
+
+  .selected_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }

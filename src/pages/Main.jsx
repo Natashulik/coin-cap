@@ -11,17 +11,17 @@ const Main = () => {
   const isModalBuyOpen = useSelector(state => state.table.isModalBuyOpen)
   const isModalWalletOpen = useSelector(state => state.wallet.isModalWalletOpen)
 
-  return  <div className='wrapper'>
+  return <div className='wrapper'>
     <Header />
-        <div className="main_info_block">
-        <PopularCryptos />
-        <Wallet />
-      </div>
-      <Search />
-      <CryptosTable />
-      {isModalBuyOpen && <div className="overlay"> <ModalBuy /> </div>}
-      {isModalWalletOpen && <div className="overlay"> <ModalWallet /> </div>}
+    <div className="main_info_block">
+      <PopularCryptos />
+      <Wallet />
     </div>
+    <Search />
+    <CryptosTable />
+    {isModalBuyOpen && <div className="overlay"> <ModalBuy /> </div>}
+    {isModalWalletOpen && <div className="overlay"> <ModalWallet /> </div>}
+  </div>
 
 }
 
