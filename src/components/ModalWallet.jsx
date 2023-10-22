@@ -110,11 +110,11 @@ const ModalWallet = () => {
       <p className="modal_wallet_total"> Total current: 0 $ </p>}
 
     {totalParchase ? <div className="wallet_result">
-      <p className="change_result"> {formatedPrice(totalParchase)} $ <img src={arrow} className="arrow" alt='arrow' />
-        {formatedPrice(totalCurrent)} $   </p>
-      <p className={changePercent >= 0 ? "positive_percent change_percent" : "negative_percent change_percent"}>
+      {totalParchase && totalCurrent && <p className="change_result"> {formatedPrice(totalParchase)} $ <img src={arrow} className="arrow" alt='arrow' />
+        {formatedPrice(totalCurrent)} $   </p>}
+      {changePercent && changeParchase && <p className={changePercent >= 0 ? "positive_percent change_percent" : "negative_percent change_percent"}>
         ( {formatedPrice(changeParchase)} $  / {formatedPercent(changePercent)} %)
-      </p>
+      </p>}
     </div> : null}
   </div>
 }
