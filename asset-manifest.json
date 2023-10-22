@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/coin-cap/static/css/main.e44b7253.css",
-    "main.js": "/coin-cap/static/js/main.b1049cff.js",
+    "main.css": "/coin-cap/static/css/main.1b59ca00.css",
+    "main.js": "/coin-cap/static/js/main.66872377.js",
     "static/js/61078.243b71c5.chunk.js": "/coin-cap/static/js/61078.243b71c5.chunk.js",
     "static/js/83536.7d04709b.chunk.js": "/coin-cap/static/js/83536.7d04709b.chunk.js",
     "static/js/9589.56c07dae.chunk.js": "/coin-cap/static/js/9589.56c07dae.chunk.js",
@@ -600,8 +600,8 @@
     "static/media/logo1.png": "/coin-cap/static/media/logo1.37c5f1c4115f45decb6f.png",
     "static/media/wallet_icon.svg": "/coin-cap/static/media/wallet_icon.e619f4ce47b2cfcc01d8f5781c086d61.svg",
     "index.html": "/coin-cap/index.html",
-    "main.e44b7253.css.map": "/coin-cap/static/css/main.e44b7253.css.map",
-    "main.b1049cff.js.map": "/coin-cap/static/js/main.b1049cff.js.map",
+    "main.1b59ca00.css.map": "/coin-cap/static/css/main.1b59ca00.css.map",
+    "main.66872377.js.map": "/coin-cap/static/js/main.66872377.js.map",
     "61078.243b71c5.chunk.js.map": "/coin-cap/static/js/61078.243b71c5.chunk.js.map",
     "83536.7d04709b.chunk.js.map": "/coin-cap/static/js/83536.7d04709b.chunk.js.map",
     "9589.56c07dae.chunk.js.map": "/coin-cap/static/js/9589.56c07dae.chunk.js.map",
@@ -1198,7 +1198,7 @@
     "787.097e29d2.chunk.js.map": "/coin-cap/static/js/787.097e29d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e44b7253.css",
-    "static/js/main.b1049cff.js"
+    "static/css/main.1b59ca00.css",
+    "static/js/main.66872377.js"
   ]
 }
