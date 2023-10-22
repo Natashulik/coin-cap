@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+#### Coin-cap
+---
+## Project description:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Coincap is a responsive application for cryptocurrency transactions. It allows users to monitor price changes for various cryptocurrencies and provides information on market capitalization and trading volume. The application provides the opportunity to create a portfolio of purchased currencies, as well as monitor changes in the value of this portfolio.
 
-## Available Scripts
+## Installation:
 
-In the project directory, you can run:
+If you want to run the application locally on your computer, you must complete the following steps:
+* On the GitHub repository page click on the "Clone or download" button and select "Download ZIP".
+* Unzip the downloaded archive into the folder where you want to install the application.
+* Open a terminal, go to the application folder and run **npm install** or **yarn** to install the dependencies.
+* Now you can start the application by running **npm start** or **yarn start**.
 
-### `npm start`
+## Usage:
+1. After launching the application, you will see a table with cryptocurrencies and basic information about each of them.
+2. To find a specific cryptocurrency, you can use the search bar or sort currencies directly in the table by any of the columns.
+3. To get detailed information about a currency, click on its row.
+4. On the currency page, there is an interactive chart that allows you to track price changes over different time periods.
+5. To buy a cryptocurrency, click on the "+" icon at the end of each table row or go to the currency page and enter the amount of currency you want to buy in the modal window.
+6. To display the purchased currencies, click on the wallet icon. After this, the entire portfolio of purchased currencies will be displayed with the purchase price and the current price of the asset. You can also remove a currency from your portfolio.
+7. To display the current value of the portfolio and the difference with the purchase price, you must click on the wallet icon.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Copyright:
+All rights to the application belong to its developers. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+##  Contacts:
+To contact the application developers, you can use the following contact information:
+- Email: nata17v@mail.ru
