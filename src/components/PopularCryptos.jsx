@@ -2,7 +2,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { setSelectedCrypto, setCryptos } from "../redux/tableSlice";
-import { fetchAllCryptos } from "../helpers/fetchAllCryptos";
+import { fetchAllCryptos } from "../helpers/fetch";
 import { formatedPrice } from "../helpers/formatedData";
 import { saveSelectedCrypto } from "../helpers/localStorage";
 

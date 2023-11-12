@@ -5,7 +5,7 @@ import Icon from "react-crypto-icons";
 import { PlusSquareTwoTone } from "@ant-design/icons";
 import { useNavigate } from "react-router";
 import { setSelectedCrypto, setIsModalBuyOpen, setCryptos } from "../redux/tableSlice";
-import { fetchAllCryptos } from "../helpers/fetchAllCryptos";
+import { fetchAllCryptos } from "../helpers/fetch";
 import { formatedPrice, formatedPercent, formatedMillion } from "../helpers/formatedData";
 import { saveSelectedCrypto } from "../helpers/localStorage";
 

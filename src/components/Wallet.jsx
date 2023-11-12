@@ -2,7 +2,7 @@ import wallet from "../assets/wallet_icon.svg";
 import { formatedPrice } from '../helpers/formatedData';
 import { useSelector, useDispatch } from "react-redux";
 import { setIsModalWalletOpen, setPriceCurrent, setStorageData } from "../redux/walletSlice";
-import { fetchCrypto } from "../helpers/fetchCrypto";
+import { fetchCrypto } from "../helpers/fetch";
 import { loadWalletCryptos } from "../helpers/localStorage";
 import { useEffect } from "react";
 

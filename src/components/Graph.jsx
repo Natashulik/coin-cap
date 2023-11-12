@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { fetchHistory } from "../helpers/fetchHistory";
+import { fetchHistory } from "../helpers/fetch";
 import { setHistoryData, setInterval, setSelectedButton } from '../redux/cryptoSlice';
 
 const Graph = () => {
@@ -29,32 +29,32 @@ const Graph = () => {
   let updatedHistory;
   if (selectedButton === '1H') {
     updatedHistory = historyData.slice(-60).map((item, index) => {
-      let min = new Date(item.date).toLocaleTimeString('en-US', { hour: 'numeric', hour12: false, minute: 'numeric' });
-      let price = Number(item.priceUsd).toFixed(3);
+      const min = new Date(item.date).toLocaleTimeString('en-US', { hour: 'numeric', hour12: false, minute: 'numeric' });
+      const price = Number(item.priceUsd).toFixed(3);
       return { priceUsd: price, date: min }
     });
   } else if (selectedButton === '24H') {
     updatedHistory = historyData.slice(-24 * 12).map((item, index) => {
-      let hour = new Date(item.date).toLocaleTimeString('en-US', { hour: 'numeric', hour12: false, minute: 'numeric' });
-      let price = Number(item.priceUsd).toFixed(3);
+      const hour = new Date(item.date).toLocaleTimeString('en-US', { hour: 'numeric', hour12: false, minute: 'numeric' });
+      const price = Number(item.priceUsd).toFixed(3);
       return { priceUsd: price, date: hour }
     });
   } else if (selectedButton === '7D') {
     updatedHistory = historyData.slice(-7 * 24).map((item, index) => {
-      let date = new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: 'short', hour: 'numeric' });
-      let price = Number(item.priceUsd).toFixed(3);
+      const date = new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: 'short', hour: 'numeric' });
+      const price = Number(item.priceUsd).toFixed(3);
       return { priceUsd: price, date: date }
     })
   } else if (selectedButton === '1M') {
     updatedHistory = historyData.slice(-30).map((item, index) => {
-      let date = new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: 'short' });
-      let price = Number(item.priceUsd).toFixed(3);
+      const date = new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: 'short' });
+      const price = Number(item.priceUsd).toFixed(3);
       return { priceUsd: price, date: date }
     })
   } else if (selectedButton === '1Y') {
     updatedHistory = historyData.map((item, index) => {
-      let month = new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: 'short' });
-      let price = Number(item.priceUsd).toFixed(3);
+      const month = new Date(item.date).toLocaleDateString("en-US", { day: "numeric", month: 'short' });
+      const price = Number(item.priceUsd).toFixed(3);
       return { priceUsd: price, date: month }
     });
   }
