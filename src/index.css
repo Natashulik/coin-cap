@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
 }
 
 .wrapper {
@@ -21,7 +21,7 @@ body {
 }
 
 .header {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: #f6ffed;
   width: 100%;
   height: 70px;
@@ -35,7 +35,7 @@ body {
 }
 
 .first_letter {
-  color: #00B96B;
+  color: #00b96b;
 }
 
 .logo_block {
@@ -52,7 +52,7 @@ body {
 }
 
 .ant-input {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 16px;
   max-width: 700px;
   display: block;
@@ -60,7 +60,7 @@ body {
   margin: 0 auto;
 }
 
-.ant-table-wrapper .ant-table-tbody>tr>td {
+.ant-table-wrapper .ant-table-tbody > tr > td {
   border-bottom: 1px solid #dbe4dc;
   font-size: 16px;
 }
@@ -68,6 +68,10 @@ body {
 .ant-table-thead {
   background-color: rgb(159, 250, 166, 0.3);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.ant-table-row:hover {
+  cursor: pointer;
 }
 
 .crypto_icon {
@@ -80,7 +84,7 @@ body {
 }
 
 .positive_percent {
-  color: #00B96B;
+  color: #00b96b;
 }
 
 .main_info_block {
@@ -110,6 +114,7 @@ body {
 .wallet_block:hover {
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
   background-color: rgba(159, 250, 160, 0.4);
+  cursor: pointer;
 }
 
 .popular_title {
@@ -135,6 +140,7 @@ body {
 .popular_cryptos_item:hover {
   background-color: rgba(159, 250, 160, 0.4);
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .popular_name {
@@ -259,9 +265,14 @@ body {
   padding: 1px;
 }
 
+.switch_button:hover {
+  cursor: pointer;
+}
+
 .switch_button.active {
   background-color: white;
   color: #00b96b;
+  cursor: pointer;
 }
 
 .modal_wallet {
@@ -292,7 +303,6 @@ body {
 .wallet_table .ant-table-thead {
   background-color: rgb(159, 250, 166, 0.3);
   box-shadow: none;
-
 }
 
 .modal_wallet_total {
@@ -333,12 +343,12 @@ body {
   padding: 10px 20px 0px;
   align-self: center;
   margin-bottom: 30px;
-  font-family: 'Roboto', 'Helvetica Neue', 'Arial';
+  font-family: "Roboto", "Helvetica Neue", "Arial";
 }
 
 .search_item {
   margin-top: 12px;
-  font-family: 'Roboto', 'Helvetica Neue', 'Arial';
+  font-family: "Roboto", "Helvetica Neue", "Arial";
 }
 
 .search_input {
@@ -347,13 +357,12 @@ body {
 }
 
 .search_block .ant-input {
-  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', sans-serif;
+  font-family: "Segoe UI", "Tahoma", "Geneva", "Verdana", sans-serif;
 }
 
 /*-------adaptive-----------*/
 
-@media(max-width: 900px) {
-
+@media (max-width: 900px) {
   .detailed_block {
     flex-direction: column;
     justify-content: flex-start;
@@ -367,11 +376,9 @@ body {
   .graph_block {
     width: 550px;
   }
-
 }
 
-@media(max-width: 650px) {
-
+@media (max-width: 650px) {
   .main_info_block {
     flex-direction: column-reverse;
     justify-content: start;
@@ -389,11 +396,9 @@ body {
   .info_table {
     max-width: 90%;
   }
-
 }
 
-@media(max-width: 580px) {
-
+@media (max-width: 580px) {
   .graph_block {
     width: 95%;
   }
@@ -414,11 +419,9 @@ body {
   .modal_wallet_total {
     padding-left: 10px;
   }
-
 }
 
-@media(max-width: 450px) {
-
+@media (max-width: 450px) {
   .modal_wallet {
     padding: 20px 0;
     width: 100%;
@@ -439,11 +442,9 @@ body {
   .ant-btn-primary {
     margin-left: 0;
   }
-
 }
 
-@media(max-width: 350px) {
-
+@media (max-width: 350px) {
   .popular_block {
     width: 200px;
     padding-bottom: 0;
@@ -481,7 +482,6 @@ body {
 
   .selected_button {
     right: 20%;
-
   }
 
   .selected_form {
@@ -489,5 +489,4 @@ body {
     flex-direction: column;
     align-items: center;
   }
-
 }
